@@ -5,7 +5,7 @@ def load_data(file_path):
         data = np.loadtxt(file_path)
         return data
     except FileNotFoundError:
-        print(f'File {file_path} not found')
+        print(f'File not found: {file_path}')
         return None
 
 def save_data(data, file_path):
