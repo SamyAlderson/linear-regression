@@ -1,3 +1,7 @@
-import ruff
+import numpy as np
 
-# ... rest of the file remains the same ...
+def calculate_mean(data):
+    return np.mean(data)
+
+def calculate_std(data):
+    return np.std(data)
