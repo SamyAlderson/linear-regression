@@ -1,7 +1,12 @@
 import numpy as np
 
-def calculate_mean(data):
-    return np.mean(data)
+def load_data(file_path):
+    try:
+        data = np.loadtxt(file_path)
+        return data
+    except FileNotFoundError:
+        print(f'File {file_path} not found')
+        return None
 
-def calculate_std(data):
-    return np.std(data)
+def save_data(data, file_path):
+    np.savetxt(file_path, data)
